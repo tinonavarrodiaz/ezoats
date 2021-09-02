@@ -1,0 +1,34 @@
+extends ../config/template
+append config
+  -pageTitle = 'Home'
+  -pageDescription = 'Pagina inicial de EDboilerplate'
+  -pageImage = 'https://ed.team/sites/default/files/EDboilerplate-logo.png'
+
+block main
+  .slider#slider(style="height:100vh")
+    
+  .home__text
+    h1(data-aos="fade-left") The Original Oatmeal<br/>Product Company
+    p(data-aos="fade-left" data-aos-delay="100") Created specifically for people on strict diets,<br/>perfect for Diabetics and Vegans. Product Range from<br/>Tostadas to Taco Shells to Tortillas. All made from 100% Oatmeal.
+    a(href="#" data-aos="fade-left" data-aos-delay="200") Learn more...
+  p.home__footer © <span id="year"></span>, Ez Oats by Cinthya  -  <a href="#">Refund Policy</a>
+  
+  script.
+      $(function() {
+        $('#slider').vegas({
+          slides: [
+            {src: 'img/home_1.jpg'},
+            {src: 'img/home_2.jpg'},
+            {src: 'img/home_3.jpg'},
+          ],
+          slide: 0,
+          overlay: false,
+          transition: 'fade',
+          animation: 'random',
+          preload: false,
+          timer: false,
+          color: '#000',
+          delay: 7000,
+          animation: 'kenburns'
+        });
+      });

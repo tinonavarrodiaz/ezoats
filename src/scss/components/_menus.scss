@@ -1,0 +1,120 @@
+// .main-header {
+//   --header-bg: #{$body-bg};
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height: var(--header-height);
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 30% 1fr;
+//   padding: 0 1em;
+//   z-index: var(--z-fixed);
+//   background: var(--header-bg);
+//   .mobile &{
+//     grid-template-columns: 70% 1fr;
+//   }
+// }
+
+// .toggle-menu {
+//   width: 2em;
+//   height: auto;
+// }
+// .logo-container{
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   height: 100%;
+// }
+// .main-nav{
+//   height: 100%;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: center;
+// }
+
+// .main-menu{
+//   //@extend %list-style;
+//   //display: flex;
+//   //justify-content: space-between;
+//   //align-items: center;
+//   @include edMenu(l);
+//   height: 100%;
+//   .mobile &{
+//     position: absolute;
+//     left: 0;
+//     top: var(--header-height);
+//     background: var(--header-bg);
+//     width: 100%;
+//     height: auto;
+//     transition: all .3s linear;
+//     &.right{
+//       transform: translateX(100%);
+//     }
+//     &.sweepDown{
+//       max-height: 0;
+//       overflow: hidden;
+//     }
+//     &.active{
+//       transform: translateY(0);
+//       max-height: calc(3em * 4);
+//     }
+//   }
+//   a{
+//     text-transform: uppercase;
+//   }
+// }
+.main-nav {
+}
+.main-menu {
+  @extend %list-style;
+  position: absolute;
+  left: 0;
+  top: var(--header-height);
+  background-color: var(--header-background);
+  width: 100%;
+  padding: 0 1em;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s;
+  &.active {
+    max-height: calc(2.5em * 3);
+  }
+  @include from(l) {
+    position: relative;
+    left: unset;
+    top: unset;
+    max-height: unset;
+    background: transparent;
+    display: flex;
+    font-size: 28px;
+  }
+  li {
+    @include from(l) {
+      position: relative;
+      &:after {
+        content: ' ';
+        height: 50px;
+        width: 1px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        background-color: #fff;
+        transform: translateY(-50%);
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  a {
+    padding: 0 30px;
+    line-height: 2.5em;
+    display: block;
+    width: 100%;
+  }
+}
