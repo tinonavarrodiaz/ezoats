@@ -11,7 +11,7 @@ block main
     +img("banner-shop","banner_store01","jpg","banner")
     .banner__text
       h2(data-aos="fade-left") Tortilla Kits
-      p(data-aos="fade-left" data-aos-delay="100") Every kit includes 4 dozen tortillas.<br class ="br">You can also create a custom kit of 4 donzens with the<br class ="br">flavors of your preference, just click on “CUSTOM KIT”.<br class ="br">Once you complete your kit, it will be added<br class ="br">to your cart
+      p(data-aos="fade-right" data-aos-delay="100") Every kit includes 4 dozen tortillas.<br class ="br">You can also create a custom kit of 4 donzens with the<br class ="br">flavors of your preference, just click on “CUSTOM KIT”.<br class ="br">Once you complete your kit, it will be added<br class ="br">to your cart
   section.products
     a(href="#").view-cart VIEW/EDIT CART
     .products-container.glide
@@ -23,7 +23,7 @@ block main
                 img(src=`img/${item.img}`)
                 figcaption=item.name
                 .item-action 
-                  button.btn-store(type='button') 4 DOZENS
+                  button.btn-store.ml(type='button') 4 DOZENS
                   .youKit.btn-store
                     span YOUR KIT
                     button.btn-plus +
