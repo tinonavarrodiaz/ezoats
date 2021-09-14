@@ -96,7 +96,11 @@
   transform: translateY(-50%) translateX(3em);
   cursor: pointer;
   @include to(l) {
-    transform: translateY(-50%) translateX(4em);
+    transform: translateY(-50%) translateX(2.5em);
+    img {
+      width: auto;
+      height: 5rem;
+    }
   }
   &--left {
     transform-origin: center;
@@ -104,7 +108,7 @@
     right: unset;
     left: 0;
     @include to(l) {
-      transform: translateY(-50%) translateX(-3.5em);
+      transform: translateY(-50%) translateX(-2.5em);
     }
   }
 }
