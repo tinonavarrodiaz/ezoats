@@ -4201,6 +4201,22 @@ if ((0, _isMobile.verifyMobile)() && br) {
   });
 }
 
+var glideSlides = (0, _initialVariables.q)('.glide__slides');
+
+if (glideSlides) {
+  glideSlides.addEventListener('click', function (e) {
+    var value = e.target.parentElement.querySelector('input');
+
+    if (e.target.classList.contains('btn-plus')) {
+      console.log(parseInt(value.value));
+
+      if (parseInt(value.value) <= 3) {
+        value.value == parseInt(value.value) + 1;
+      }
+    }
+  });
+}
+
 },{"./modules/active-menu":4,"./modules/banner":5,"./modules/initialVariables":6,"./modules/isMobile":7,"./modules/loading":8,"@glidejs/glide":1,"aos":2}],4:[function(require,module,exports){
 "use strict";
 
