@@ -1,6 +1,6 @@
 extends ../config/template
 append config
-
+  -pageTitle = 'Shop'
 
 block main
   section.page-title 
@@ -10,16 +10,16 @@ block main
     //- img(src="img/banner_store01.jpg", alt="Banner Store")
     +img("banner-shop","banner_store01","jpg","banner")
     .banner__text
-      h2 Tortilla Kits
-      p Every kit includes 4 dozen tortillas.<br class ="br">You can also create a custom kit of 4 donzens with the<br class ="br">flavors of your preference, just click on “CUSTOM KIT”.<br class ="br">Once you complete your kit, it will be added<br class ="br">to your cart
+      h2(data-aos="fade-left") Tortilla Kits
+      p(data-aos="fade-left" data-aos-delay="100") Every kit includes 4 dozen tortillas.<br class ="br">You can also create a custom kit of 4 donzens with the<br class ="br">flavors of your preference, just click on “CUSTOM KIT”.<br class ="br">Once you complete your kit, it will be added<br class ="br">to your cart
   section.products
     a(href="#").view-cart VIEW/EDIT CART
     .products-container.glide
       div(data-glide-el="track" class="glide__track")
         ul.glide__slides
           each item, i in products
-            li.glide__slide
-              figure.products__item 
+            li.glide__slide(data-aos="fade-up" data-aos-delay=`${i*100}`)
+              figure.products__item
                 img(src=`img/${item.img}`)
                 figcaption=item.name
                 .item-action 
@@ -38,7 +38,7 @@ block main
           </button>
         </div>
   section.section-bottom 
-    p Frozen Tortillas that can be thrown<br class ="br">in the oven and make delicious Tostadas!
+    p(data-aos="fade-right") Frozen Tortillas that can be thrown<br class ="br">in the oven and make delicious Tostadas!
     footer 
       span © 2021, Ez Oats by Cinthya - 
       a(href="#") Refund Policy
