@@ -95,3 +95,17 @@ const br = [...all('br')]
 if(verifyMobile() && br){
   br.map(el=>el.remove())
 }
+
+const glideSlides = q('.glide__slides')
+
+if(glideSlides){
+  glideSlides.addEventListener('click', e=>{
+    let value = e.target.parentElement.querySelector('input')
+    if(e.target.classList.contains('btn-plus')){
+      console.log(parseInt(value.value))
+      if(parseInt(value.value) <=3){
+        value.value==parseInt(value.value)+1
+      }
+    }
+  })
+}

@@ -94,6 +94,7 @@
   top: 50%;
   right: 0em;
   transform: translateY(-50%) translateX(3em);
+  cursor: pointer;
   @include to(l) {
     transform: translateY(-50%) translateX(4em);
   }
