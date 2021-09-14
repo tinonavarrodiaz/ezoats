@@ -29,7 +29,7 @@ const tsProject = ts.createProject("./tsconfig.json");
 const wordPress = false;
 const themeName = "";
 const wordpressThemePath = "./wordpress/wp-content/themes";
-const siteUrl = "";
+const siteUrl = "https://myezoats.com/";
 
 const urlLocal = "";
 
@@ -190,7 +190,7 @@ const imagesBuild = () => {
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
-        imagemin.jpegtran({ progressive: true }),
+        // imagemin.jpegtran({ progressive: true }),
         imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo()
       ])

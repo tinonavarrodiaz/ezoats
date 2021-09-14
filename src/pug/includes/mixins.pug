@@ -11,4 +11,6 @@
 
 
 mixin img(className,src,ext,alt)
+  //- source(srcset= `img/${src}.${ext}` media="(min-width: 1024px)")
+  //- source(srcset= `img/${src}-m.${ext}` media="(max-width: 1024px)")
   img(src=`img/${src}.${ext}` alt=alt class=className)

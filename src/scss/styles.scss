@@ -24,6 +24,7 @@ $fractions: 3 6; // Fracciones para crear columnas (core flexbox)
 
 //EDGrid
 @import '~ed-grid/ed-grid';
+// @import '~@glidejs/glide/dist/css/glide.core.min.css';
 // @import '~aos/dist/aos.css';
 
 // Config
@@ -52,6 +53,8 @@ $fractions: 3 6; // Fracciones para crear columnas (core flexbox)
 @import 'components/loading';
 
 @import 'pages/home';
+@import 'pages/section';
+@import 'pages/store';
 
 // Utilities (hacks)
 // Todos los hacks que hayas necesitado para solucionar conflictos

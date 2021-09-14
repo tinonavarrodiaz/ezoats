@@ -17,6 +17,7 @@ import { loading } from "./modules/loading";
 import { activeMenu, toggleMenu } from "./modules/active-menu";
 import {banner} from "./modules/banner";
 import AOS from 'aos';
+import Glide from '@glidejs/glide'
 
 AOS.init({
   easing: 'ease-out-back',
@@ -70,3 +71,27 @@ toggleMenu(verifyMobile(), "#toggle", "#main-menu");
 
 const bannerElement = id('bannerHome');
 if (bannerElement) banner(bannerElement,5000);
+
+
+if(document.querySelector('.glide')){
+  new Glide('.glide',{
+    type: "carousel",
+    perView:4,
+    // autoplay:5000,
+    hoverpause: false,
+    gap: 15,
+    breakpoints: {
+      800: {
+        perView: 3
+      },
+      600: {
+        perView: 1
+      }
+    }
+  }).mount()
+}
+
+const br = [...all('br')]
+if(verifyMobile() && br){
+  br.map(el=>el.remove())
+}

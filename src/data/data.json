@@ -1,3 +1,32 @@
 {
-  
+  "products": [
+    {
+      "img" : "papper_habanero-50.jpg",
+      "name" : "Pepper Habanero"
+    },
+    {
+      "img" : "chipotle-50.jpg",
+      "name" : "Chipotle"
+    },
+    {
+      "img" : "cilantro-50.jpg",
+      "name" : "Cilantro & Jalapeño"
+    },
+    {
+      "img" : "cinnamon-50.jpg",
+      "name" : "Cinnamon"
+    },
+    {
+      "img" : "original-50.jpg",
+      "name" : "Original"
+    },
+    {
+      "img" : "variety-50.jpg",
+      "name" : "Variety Pack"
+    },
+    {
+      "img" : "spinach-50.jpg",
+      "name" : "Spinach"
+    }
+  ]
 }

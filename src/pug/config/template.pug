@@ -10,13 +10,14 @@ html(lang="es")
   head
     title= `${pageTitle} - ${siteName}`
     meta(charset="utf-8")
-    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
     meta(name="twitter:card" content="summary_large_image")
     meta(name="twitter:site" content=twitterAccount)
     meta(property="og:title" content=pageTitle)
     meta(property="og:description" content=pageDescription)
     meta(property="og:image" content=pageImage)
     link(rel="stylesheet", href="assets/fonts/stylesheet.css")
+    link(rel="stylesheet", href="assets/css/glide.core.min.css")
     link(rel="stylesheet", href="assets/css/vegas.min.css")
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     link(rel="stylesheet" href="css/styles.css")
@@ -24,7 +25,7 @@ html(lang="es")
     script(src="assets/js/zepto.js")
     script(src="assets/js/vegas.min.js")
   body(class=classBody)
-    header.main-header#mainHeader
+    header.main-header#mainHeader(data-aos="fade-down")
       include ../includes/header
     main
       block main

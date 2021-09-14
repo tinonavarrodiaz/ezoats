@@ -879,6 +879,11 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@glidejs/glide@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@glidejs/glide/-/glide-3.4.1.tgz#8ad21f3169076e32bbfd75ed0753807662c25e90"
+  integrity sha512-C34AEcK1HjSyxilRToUL54I6KAoodojUbeRlXoruobZuG0eGm8xfDL+3kgkWj7AJK4EZtunSOYfoqMp70eDtwg==
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
@@ -923,6 +928,11 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
+
+"@splidejs/splide@^2.4.21":
+  version "2.4.21"
+  resolved "https://registry.yarnpkg.com/@splidejs/splide/-/splide-2.4.21.tgz#ad1954d8d8822c9bfea0d3dc6a119358b88581ad"
+  integrity sha512-LdIwSnmNsGybCCnA3QG2dOeRv/rQl46jf7FflXxMGX0ADYWyL6UJHWJbMZvHBi5I67uRJY1ga/W+CvJ39nH26A==
 
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.11"

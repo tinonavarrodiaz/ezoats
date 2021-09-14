@@ -1,0 +1,109 @@
+.products {
+  background-color: #16110e;
+  position: relative;
+  padding: 250px 10vw;
+  transform: translateY(-1px);
+  @include from(1800px) {
+    padding: 250px 15vw;
+  }
+  @include to(l) {
+    padding: 7em 4em;
+  }
+}
+.view-cart {
+  position: absolute;
+  display: block;
+  right: 107px;
+  top: 70px;
+  font-size: 23px;
+  color: #fff;
+  @include to(l) {
+    // padding: 6em 4em;
+    right: 50%;
+    top: 2em;
+    transform: translateX(50%);
+  }
+}
+.products-container {
+  // background-color: lime;
+}
+.products__item {
+  background-color: #231e1c;
+  padding: 38px 24px 20px;
+  width: 90%;
+  max-height: 500px;
+  @include to(l) {
+    width: 100%;
+  }
+  figcaption {
+    text-align: center;
+    color: #bcb5ab;
+    font-size: 23px;
+    font-family: $heading-font;
+    padding: 1.2rem 0;
+    @include from(1800px) {
+      font-size: 30px;
+    }
+  }
+}
+.item-action {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-store {
+  background-color: #000000;
+  color: #bcb5ab;
+  line-height: 2em;
+  height: 2em;
+  padding: 0 0.5em;
+  border: 1px solid;
+  font-size: 0.9em;
+  border-radius: 0.3rem;
+  input {
+    width: 1.5em !important;
+    text-align: center;
+    background-color: transparent !important;
+    color: inherit !important;
+    border: none;
+  }
+  > button {
+    // display: table;
+    border: none;
+    align-items: center;
+    // padding: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+  span {
+    margin-right: 0.75em;
+  }
+}
+.youKit {
+  display: flex;
+}
+.products-container {
+  position: relative;
+
+  // background-color: lime;
+}
+.glide__arrow {
+  background: transparent !important;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 0em;
+  transform: translateY(-50%) translateX(3em);
+  @include to(l) {
+    transform: translateY(-50%) translateX(4em);
+  }
+  &--left {
+    transform-origin: center;
+    transform: translateY(-50%) translateX(calc(-100% + 3px - 3em));
+    right: unset;
+    left: 0;
+    @include to(l) {
+      transform: translateY(-50%) translateX(-3.5em);
+    }
+  }
+}

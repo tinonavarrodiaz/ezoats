@@ -31,7 +31,7 @@
   left: 107px;
   z-index: 100;
   color: #fff;
-  transform: translateY(-20%);
+  transform: translateY(-50%);
   @include to(l) {
     left: 0;
     width: 100%;
@@ -39,20 +39,20 @@
   }
   h1 {
     line-height: 1.1;
-    font-size: 50px;
+    font-size: 40px;
     @include to(l) {
       font-size: 30px;
     }
   }
   p {
     line-height: 1.1;
-    font-size: 30px;
+    font-size: 25px;
     @include to(l) {
       font-size: 20px;
     }
   }
   a {
-    font-size: 28px;
+    font-size: 20px;
     text-decoration: underline;
     @include to(l) {
       font-size: 16px;

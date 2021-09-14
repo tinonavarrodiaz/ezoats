@@ -16,7 +16,7 @@ $width100: calc(100vw - var(--scrollbar));
   --header-height: 100px;
 
   @include from(l) {
-    --header-height: 150px;
+    --header-height: 145px;
   }
 }
 
@@ -49,9 +49,9 @@ $color-dark: #282d31;
 $color-dark-alt: #141618;
 $color-border: #eeeef3;
 $color-light: #f6f6f6;
-$color-text: #53575a;
+$color-text: #17110e;
 $color-text-light: #babdbf;
-$color-body-bg: #fcfcfe;
+$color-body-bg: #bcb5ab;
 
 $firstColor: $color-fisrt;
 $firstColorAlt: $color-first-alt;

@@ -6,8 +6,8 @@
 // @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 
 // Font families
-$body-font: 'Futura PT Book', "gabriola";
-$heading-font: 'Minion Variable Concept', "sans-serif";
+$body-font: 'Futura PT Book', 'gabriola';
+$heading-font: 'Minion Variable Concept', 'sans-serif';
 
 // CSS variables for typography
 :root {
@@ -43,7 +43,7 @@ $fontSizes: (
   title3: var(--h3-font-size),
   normal: var(--normal-font-size),
   small: var(--small-font-size),
-  smaller: var(--smaller-font-size)
+  smaller: var(--smaller-font-size),
 );
 
 // Get font size from map
@@ -204,7 +204,7 @@ blockquote {
   }
 
   &::before {
-    content: "\201C";
+    content: '\201C';
     font-family: Georgia, serif;
     font-size: 3em;
     position: absolute;
@@ -230,6 +230,6 @@ a {
 }
 
 ::selection {
-  background: var(--second-color);
+  background: #424a55;
   color: #fff;
 }
