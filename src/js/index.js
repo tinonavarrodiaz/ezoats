@@ -109,3 +109,30 @@ if(glideSlides){
     }
   })
 }
+
+const slider = id('slider')
+
+if (slider){
+  const slides = [...slider.querySelectorAll('.slide')]
+  const total = slides.length
+  slider.addEventListener('click', e=>{
+    let active = slider.querySelector('.active');
+    let index = slides.indexOf(active)
+    let T = e.target
+    slides.map(el=>el.classList.remove('active'));
+    if (T.classList.contains('right')){
+      if (index === total-1){
+        slides[0].classList.add('active')
+      }else{
+        slides[index+1].classList.add('active')
+      }
+    }
+    if (T.classList.contains('left')){
+      if (index === 0){
+        slides[total-1].classList.add('active')
+      }else{
+        slides[index-1].classList.add('active')
+      }
+    }
+  })
+}

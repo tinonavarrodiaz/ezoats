@@ -49,6 +49,7 @@
     "aos": "^2.3.4",
     "hamburgers": "^1.1.3",
     "jquery": "^3.5.1",
-    "sizzle": "^2.3.5"
+    "sizzle": "^2.3.5",
+    "tiny-swiper": "^2.1.2"
   }
 }

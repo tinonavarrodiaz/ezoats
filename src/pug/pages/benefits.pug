@@ -1,0 +1,28 @@
+extends ../config/template
+append config
+  -pageTitle = 'Benefits'
+
+block main
+  section.page-title 
+    h1(data-aos="fade-right") BENEFITS
+    p(data-aos="fade-left") Discover the different f lavors of our products.
+  section.slider-page
+    .slide-container#slider
+      each slide, i in benefits
+        if i ===0
+          .slide.active
+            img(src=`img/${slide.img}.jpg`)
+            .slide-text
+              h3=slide.title
+              p=slide.description
+        else
+          .slide
+            img(src=`img/${slide.img}.jpg`)
+            .slide-text
+              h3=slide.title
+              p=slide.description
+      .slider-arrow.slide-left.left
+        img(src="img/arrow-left.png", alt="").left
+      .slider-arrow.slide-right.right
+        img(src="img/arrow-right.png", alt="").right
+  
