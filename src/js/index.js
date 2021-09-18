@@ -112,9 +112,18 @@ if(glideSlides){
 
 const slider = id('slider')
 
+
+
 if (slider){
   const slides = [...slider.querySelectorAll('.slide')]
   const total = slides.length
+  let height = 0 
+  let text = [...document.querySelectorAll('.slide-text')] //.clientHeight
+  text.map(el=>{
+    el.clientHeight > height ? height=el.clientHeight : null
+  })
+  console.log(height)
+  dd.style.setProperty('--text-height',`${height}px`)
   slider.addEventListener('click', e=>{
     let active = slider.querySelector('.active');
     let index = slides.indexOf(active)
@@ -134,5 +143,8 @@ if (slider){
         slides[index-1].classList.add('active')
       }
     }
+    // let textHeight = document.querySelector('.active .slide-text').clientHeight
+    // console.log(textHeight)
+    // dd.style.setProperty('--text-height',`${textHeight}px`)
   })
 }

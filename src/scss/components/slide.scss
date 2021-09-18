@@ -1,10 +1,10 @@
 .slide-container {
   width: 100%;
-  height: calc(70vw + 180px);
+  height: calc(70vw + var(--text-height) + 50px);
   position: relative;
   background: #000 !important;
   @include from(l) {
-    height: calc(45vw + 180px);
+    height: calc(45vw + var(--text-height));
   }
   .slide {
     position: absolute;
@@ -29,16 +29,23 @@
       margin: 0 !important;
       color: #fff;
       background-color: #000;
-      height: 180px;
+      height: var(--text-height);
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
-      padding: 0 3% 0 20%;
-      text-align: right;
-      font-size: 120%;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 100%;
+      text-align: center;
+      padding: 1em;
       @include from(l) {
-        font-size: 100%;
+        font-size: 130%;
+        text-align: right;
+        align-items: flex-end;
+        padding: 1rem 3% 1rem 20%;
+        h3 {
+          font-size: 140%;
+          text-align: right;
+        }
       }
     }
     //   position: relative;
