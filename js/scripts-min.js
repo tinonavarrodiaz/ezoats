@@ -4233,7 +4233,7 @@ if (slider) {
   });
   console.log(height);
 
-  _initialVariables.dd.style.setProperty('--text-height', "".concat(height, "px"));
+  _initialVariables.dd.style.setProperty('--text-height', 0);
 
   slider.addEventListener('click', function (e) {
     var active = slider.querySelector('.active');
