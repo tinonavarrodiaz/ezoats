@@ -4235,7 +4235,7 @@ if (slider) {
 
   _initialVariables.dd.style.setProperty('--text-height', 0);
 
-  slider.addEventListener('click', function (e) {
+  slider.parentElement.addEventListener('click', function (e) {
     var active = slider.querySelector('.active');
     var index = slides.indexOf(active);
     var T = e.target;
