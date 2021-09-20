@@ -4,7 +4,7 @@
   padding: 250px 10vw;
   transform: translateY(-1px);
   @include from(1800px) {
-    padding: 250px 15vw;
+    padding: 250px 10vw 210px;
   }
   @include to(l) {
     padding: 7em 4em;
@@ -29,7 +29,7 @@
 }
 .products__item {
   background-color: #231e1c;
-  padding: 38px 24px 20px;
+  padding: 55px 24px 30px;
   width: 90%;
   max-height: 500px;
   @include to(l) {
