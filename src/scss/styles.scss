@@ -51,7 +51,7 @@ $fractions: 3 6; // Fracciones para crear columnas (core flexbox)
 @import 'components/header';
 @import 'components/menus';
 @import 'components/loading';
-@import 'components/slide';
+@import 'components/slider';
 
 @import 'pages/home';
 @import 'pages/section';
@@ -61,3 +61,12 @@ $fractions: 3 6; // Fracciones para crear columnas (core flexbox)
 // Todos los hacks que hayas necesitado para solucionar conflictos
 // o resolver situaciones extremas. Se espera poder mejorarlos luego.
 @import 'hacks/hacks';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal !important;
+}

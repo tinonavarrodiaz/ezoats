@@ -13,21 +13,26 @@
   }
   h1 {
     line-height: 1.1;
-    font-size: 100px !important;
+    font-size: 170px !important;
     margin-bottom: 0;
     font-family: $body-font;
+    // font-size: 95px;
+    opacity: 1;
     // margin-bottom: 0.5em;
-    line-height: 1.1em;
+    // line-height: 1.1em;
     @include to(l) {
       font-size: 75px !important;
     }
   }
   p {
     margin-bottom: 0;
-    font-size: 30px;
+    font-size: 60px;
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.1;
+    @include to(l) {
+      font-size: 30px;
+    }
   }
 }
 .banner-page {

@@ -123,8 +123,8 @@ if (slider){
     el.clientHeight > height ? height=el.clientHeight : null
   })
   console.log(height)
-  dd.style.setProperty('--text-height',`${height}px`)
-  slider.addEventListener('click', e=>{
+  dd.style.setProperty('--text-height',0)
+  slider.parentElement.addEventListener('click', e=>{
     let active = slider.querySelector('.active');
     let index = slides.indexOf(active)
     let T = e.target
