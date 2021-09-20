@@ -79,7 +79,7 @@
   max-height: 0;
   transition: all 0.5s;
   &.active {
-    max-height: calc(2.5em * 3);
+    max-height: calc(2.5em * 4);
   }
   @include from(l) {
     position: relative;
