@@ -4184,7 +4184,7 @@ if (document.querySelector('.glide')) {
     gap: 15,
     breakpoints: {
       800: {
-        perView: 3
+        perView: 2
       },
       600: {
         perView: 1
