@@ -4263,6 +4263,14 @@ if (slider) {
       }
     }
   });
+}
+
+if ((0, _isMobile.verifyMobile)() && document.body.classList.contains('bio')) {
+  var brs = _toConsumableArray(document.querySelectorAll('br'));
+
+  brs.map(function (el) {
+    return el.remove();
+  });
 } // if (slider){
 //   const slides = [...slider.querySelectorAll('.slide')]
 //   const total = slides.length
