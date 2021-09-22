@@ -4147,9 +4147,9 @@ if ((0, _initialVariables.q)('.home__text ') && (0, _isMobile.verifyMobile)()) {
 } // id('mainHeader').style.height=`${150*100/window.innerWidth}vw`
 
 
-_initialVariables.dd.style.setProperty('--windowHeight', "".concat(150 * 100 / window.innerHeight, "vh"));
+_initialVariables.dd.style.setProperty('--windowHeight', "".concat(150 * 100 / window.innerHeight, "vh")); // console.log(w.innerHeight,150*100/w.innerHeight)
 
-console.log(_initialVariables.w.innerHeight, 150 * 100 / _initialVariables.w.innerHeight);
+
 var loadingEle = document.getElementById("loading");
 addEventListener("load", function () {
   (0, _initialVariables.cssScrollBarWidth)();
@@ -4208,8 +4208,7 @@ if (glideSlides) {
     var value = e.target.parentElement.querySelector('input');
 
     if (e.target.classList.contains('btn-plus')) {
-      console.log(parseInt(value.value));
-
+      // console.log(parseInt(value.value))
       if (parseInt(value.value) <= 3) {
         value.value == parseInt(value.value) + 1;
       }
@@ -4217,52 +4216,99 @@ if (glideSlides) {
   });
 }
 
-var slider = (0, _initialVariables.id)('slider');
+var slider = document.getElementById('slider');
 
 if (slider) {
   var slides = _toConsumableArray(slider.querySelectorAll('.slide'));
 
+  var text = _toConsumableArray(slider.querySelectorAll('.slide-text'));
+
   var total = slides.length;
-  var height = 0;
-
-  var text = _toConsumableArray(document.querySelectorAll('.slide-text')); //.clientHeight
-
-
+  var textHight = 0;
   text.map(function (el) {
-    el.clientHeight > height ? height = el.clientHeight : null;
+    el.clientHeight >= textHight ? textHight = el.clientHeight : null;
+    console.log(el.clientHeight + "\n");
   });
-  console.log(height);
 
-  _initialVariables.dd.style.setProperty('--text-height', 0);
+  _initialVariables.dd.style.setProperty('--text-highlight', textHight);
 
-  slider.parentElement.addEventListener('click', function (e) {
-    var active = slider.querySelector('.active');
-    var index = slides.indexOf(active);
-    var T = e.target;
-    slides.map(function (el) {
-      return el.classList.remove('active');
-    });
+  slides.map(function (el) {
+    return el.style.position = "absolute";
+  });
+  slider.addEventListener('click', function (e) {
+    var Target = e.target;
+    console.log(Target.classList);
 
-    if (T.classList.contains('right')) {
-      if (index === total - 1) {
-        slides[0].classList.add('active');
-      } else {
-        slides[index + 1].classList.add('active');
+    if (Target.classList.contains('slider-arrow') || Target.classList.contains('arrow')) {
+      var active = slider.querySelector('.active');
+      var index = slides.indexOf(active);
+      slides.map(function (el) {
+        return el.classList.remove('active');
+      });
+
+      if (Target.classList.contains('left')) {
+        if (index === 0) {
+          slides[total - 1].classList.add('active');
+        } else {
+          slides[index - 1].classList.add('active');
+        }
+      }
+
+      if (Target.classList.contains('right')) {
+        if (index === total - 1) {
+          slides[0].classList.add('active');
+        } else {
+          slides[index + 1].classList.add('active');
+        }
       }
     }
-
-    if (T.classList.contains('left')) {
-      if (index === 0) {
-        slides[total - 1].classList.add('active');
-      } else {
-        slides[index - 1].classList.add('active');
-      }
-    } // let textHeight = document.querySelector('.active .slide-text').clientHeight
-    // console.log(textHeight)
-    // dd.style.setProperty('--text-height',`${textHeight}px`)
-
   });
-}
+} // if (slider){
+//   const slides = [...slider.querySelectorAll('.slide')]
+//   const total = slides.length
+//   let height = 0
+//   let imHeight = 0
+//   let text = [...document.querySelectorAll('.slide-text')] //.clientHeight
+//   console.log(slides.length)
+//   slides.forEach((el,i)=>{
+//     el.clientHeight > height ? height=el.clientHeight : null
+//     // imHeight = el.querySelector('img').clientHeight
+//     console.log(`${el.clientHeight} / ${i}`)
+//   })
+//   c.log(height)
+//   let img = id('img');
+//   imHeight = img.getBoundingClientRect().width*.5922;
+//   // console.log(imHeight)
+//   dd.style.setProperty('--img-height',`${imHeight}px`)
+//   // console.log(imHeight)
+//   dd.style.setProperty('--text-height', `${height}px`)
+//   slider.parentElement.addEventListener('click', e=>{
+//     // console.log(e.target)
+//     if(e.target.classList.contains('slider-arrow') || e.target.parentElement.classList.contains('slider-arrow') ){
+//     let active = slider.querySelector('.active');
+//     let index = slides.indexOf(active)
+//     let T = e.target
+//     slides.map(el=>el.classList.remove('active'));
+//     if (T.classList.contains('right')){
+//       if (index === total-1){
+//         slides[0].classList.add('active')
+//       }else{
+//         slides[index+1].classList.add('active')
+//       }
+//     }
+//     if (T.classList.contains('left')){
+//       if (index === 0){
+//         slides[total-1].classList.add('active')
+//       }else{
+//         slides[index-1].classList.add('active')
+//       }
+//     }
+//   }
+//     // let textHeight = document.querySelector('.active .slide-text').clientHeight
+//     // console.log(textHeight)
+//     // dd.style.setProperty('--text-height',`${textHeight}px`)
+//   })
+// }
 
 },{"./modules/active-menu":4,"./modules/banner":5,"./modules/initialVariables":6,"./modules/isMobile":7,"./modules/loading":8,"@glidejs/glide":1,"aos":2}],4:[function(require,module,exports){
 "use strict";
