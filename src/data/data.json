@@ -1,31 +1,31 @@
 {
   "products": [
     {
-      "img" : "papper_habanero-50.jpg",
+      "img" : "papper_habanero.jpg",
       "name" : "Pepper Habanero"
     },
     {
-      "img" : "chipotle-50.jpg",
+      "img" : "chipotle.jpg",
       "name" : "Chipotle"
     },
     {
-      "img" : "cilantro-50.jpg",
+      "img" : "cilantro.jpg",
       "name" : "Cilantro & Jalapeño"
     },
     {
-      "img" : "cinnamon-50.jpg",
+      "img" : "cinnamon.jpg",
       "name" : "Cinnamon"
     },
     {
-      "img" : "original-50.jpg",
+      "img" : "original.jpg",
       "name" : "Original"
     },
     {
-      "img" : "variety-50.jpg",
+      "img" : "variety.jpg",
       "name" : "Variety Pack"
     },
     {
-      "img" : "spinach-50.jpg",
+      "img" : "spinach.jpg",
       "name" : "Spinach"
     }
   ],
@@ -33,47 +33,47 @@
     {
       "title": "Helps Control Weight",
       "description": "Oatmeal reduces appetite by Increasing the hunger-fighting hormone holecystokinin.",
-      "img": "weight_new-50"
+      "img": "weight"
     },
     {
       "title": "Shields Your Skin",
-      "description": "The starchiness of oats creates a barrier that allows the skin to Hold its moisture.",
-      "img": "skin-50"
+      "description": "The starchiness of oats creates a barrier that allows the skin to hold its moisture.",
+      "img": "skin"
     },
     {
       "title": "Stabilizes Blood Sugar",
-      "description": "As a result of Oatmeal’s High soluble fiber content, its sugar is released more slowly into the blood stream. Steel cut oats will have more of an effect on stabilizing your blood sugar than instant oats, because they are less processed and thus have more soluble fiber",
-      "img": "sugar-50"
+      "description": "As a result of Oatmeal’s High soluble fiber content, its sugar is released more slowly into the blood stream. Steel cut oats will have more of an effect on stabilizing your blood sugar than instant oats, because they are less processed and thus have more soluble fiber.",
+      "img": "sugar"
     },
     {
       "title": "Helps You Sleep",
       "description": "Oats Contain Melotonin and Complex Carbohydrates that can help more tryptophan get into the brain and helps you sleep.",
-      "img": "sleep-50"
+      "img": "sleep"
     },
     {
       "title": "Enhances Immune Response To Disease",
       "description": "Oatmeal has been heavily studied in relation to the immune system’s response o disease and infection. Essentially, because of oatmeal’s unique fiber called beta-glucan.",
-      "img": "immune-50"
+      "img": "immune"
     },
     {
       "title": "Promotes Antioxidant Activity",
-      "description": "Oatmeal is loaded with antioxidants called avenanthramides, which are unique to oats. Antioxidants are important  because they protect your cells from free radicals, which are molecules you produce through metabolisim and exposure to environmental toxins. Free radicals increase your risk for cancer and heart disease because they are unstable. Avenanthramides Antioxidents inhibit inflammation and boost your production of nitric oxide, which prevents hardening of your arteries.",
+      "description": "Oatmeal is loaded with antioxidants called avenanthramides, which are unique to oats. Antioxidants are important  because they protect\n your cells from free radicals, which are molecules you produce through metabolisim and exposure to environmental toxins. Free radicals\n increase your risk for cancer and heart disease because they are unstable. Avenanthramides Antioxidents inhibit inflammation and\n boost your production of nitric oxide, which prevents hardening of your arteries.",
       "img": "antioxidant"
     },
     {
       "title": "Reduces Cholestrol",
       "description": "Diet that includes plenty whole grains such as oats is just as effective as taking anti-hypertensive medication to lower blood pressure.",
-      "img": "cholestrol-50"
+      "img": "cholestrol"
     },
     {
       "title": "Athletic Performance",
       "description": "Oatmeal is a great Carbohydrate and protein source, providing calories and energy. They alter metabolism and enhance performance when ingested 45 minutes to 1 hour efore excercise.",
-      "img": "athletic-50"
+      "img": "athletic"
     },
     {
       "title": "Lowers Risk of Colon Cancer",
       "description": "Studies covered  nearly 2 Milliion people that ate10 additional Grams of Oats there was a 10% reduction in their risk of developing Colorectal Cancer.",
-      "img": "cancer-50"
+      "img": "cancer"
     }
   ]
 }

@@ -41,7 +41,7 @@ if(q('.home__text ') && verifyMobile()){
 
 // id('mainHeader').style.height=`${150*100/window.innerWidth}vw`
 dd.style.setProperty('--windowHeight',`${150*100/window.innerHeight}vh`)
-console.log(w.innerHeight,150*100/w.innerHeight)
+// console.log(w.innerHeight,150*100/w.innerHeight)
 const loadingEle = document.getElementById("loading");
 
 
@@ -82,7 +82,7 @@ if(document.querySelector('.glide')){
     gap: 15,
     breakpoints: {
       800: {
-        perView: 3
+        perView: 2
       },
       600: {
         perView: 1
@@ -102,7 +102,7 @@ if(glideSlides){
   glideSlides.addEventListener('click', e=>{
     let value = e.target.parentElement.querySelector('input')
     if(e.target.classList.contains('btn-plus')){
-      console.log(parseInt(value.value))
+      // console.log(parseInt(value.value))
       if(parseInt(value.value) <=3){
         value.value==parseInt(value.value)+1
       }
@@ -110,41 +110,92 @@ if(glideSlides){
   })
 }
 
-const slider = id('slider')
+const slider = document.getElementById('slider')
 
 
-
-if (slider){
-  const slides = [...slider.querySelectorAll('.slide')]
-  const total = slides.length
-  let height = 0 
-  let text = [...document.querySelectorAll('.slide-text')] //.clientHeight
+if(slider){
+  let slides = [...slider.querySelectorAll('.slide')]
+  let text = [...slider.querySelectorAll('.slide-text')]
+  let total = slides.length
+  let textHight = 0
   text.map(el=>{
-    el.clientHeight > height ? height=el.clientHeight : null
+    el.clientHeight >=textHight ? textHight = el.clientHeight : null
+    console.log(el.clientHeight+"\n")
   })
-  console.log(height)
-  dd.style.setProperty('--text-height',0)
-  slider.parentElement.addEventListener('click', e=>{
-    let active = slider.querySelector('.active');
-    let index = slides.indexOf(active)
-    let T = e.target
-    slides.map(el=>el.classList.remove('active'));
-    if (T.classList.contains('right')){
-      if (index === total-1){
-        slides[0].classList.add('active')
-      }else{
-        slides[index+1].classList.add('active')
+  dd.style.setProperty('--text-highlight', textHight)
+  slides.map(el=>el.style.position="absolute")
+  slider.addEventListener('click', e=>{
+    const Target = e.target
+    console.log(Target.classList)
+    if (Target.classList.contains('slider-arrow') || Target.classList.contains('arrow') ){
+      let active = slider.querySelector('.active')
+      let index = slides.indexOf(active)
+      slides.map(el=>el.classList.remove('active'))
+      if(Target.classList.contains('left')){
+        if(index===0){
+          slides[total-1].classList.add('active')
+        }else{
+          slides[index-1].classList.add('active')
+        }
+      }
+      if(Target.classList.contains('right')){
+        if(index===total-1){
+          slides[0].classList.add('active')
+        }else{
+          slides[index+1].classList.add('active')
+        }
       }
     }
-    if (T.classList.contains('left')){
-      if (index === 0){
-        slides[total-1].classList.add('active')
-      }else{
-        slides[index-1].classList.add('active')
-      }
-    }
-    // let textHeight = document.querySelector('.active .slide-text').clientHeight
-    // console.log(textHeight)
-    // dd.style.setProperty('--text-height',`${textHeight}px`)
   })
 }
+
+if (verifyMobile() && document.body.classList.contains('bio')){
+  let brs = [...document.querySelectorAll('br')]
+  brs.map(el=>el.remove())
+}
+// if (slider){
+//   const slides = [...slider.querySelectorAll('.slide')]
+//   const total = slides.length
+//   let height = 0
+//   let imHeight = 0
+//   let text = [...document.querySelectorAll('.slide-text')] //.clientHeight
+//   console.log(slides.length)
+//   slides.forEach((el,i)=>{
+//     el.clientHeight > height ? height=el.clientHeight : null
+//     // imHeight = el.querySelector('img').clientHeight
+//     console.log(`${el.clientHeight} / ${i}`)
+//   })
+//   c.log(height)
+//   let img = id('img');
+//   imHeight = img.getBoundingClientRect().width*.5922;
+//   // console.log(imHeight)
+//   dd.style.setProperty('--img-height',`${imHeight}px`)
+//   // console.log(imHeight)
+//   dd.style.setProperty('--text-height', `${height}px`)
+//   slider.parentElement.addEventListener('click', e=>{
+//     // console.log(e.target)
+//     if(e.target.classList.contains('slider-arrow') || e.target.parentElement.classList.contains('slider-arrow') ){
+//     let active = slider.querySelector('.active');
+//     let index = slides.indexOf(active)
+//     let T = e.target
+//     slides.map(el=>el.classList.remove('active'));
+//     if (T.classList.contains('right')){
+//       if (index === total-1){
+//         slides[0].classList.add('active')
+//       }else{
+//         slides[index+1].classList.add('active')
+//       }
+//     }
+//     if (T.classList.contains('left')){
+//       if (index === 0){
+//         slides[total-1].classList.add('active')
+//       }else{
+//         slides[index-1].classList.add('active')
+//       }
+//     }
+//   }
+//     // let textHeight = document.querySelector('.active .slide-text').clientHeight
+//     // console.log(textHeight)
+//     // dd.style.setProperty('--text-height',`${textHeight}px`)
+//   })
+// }

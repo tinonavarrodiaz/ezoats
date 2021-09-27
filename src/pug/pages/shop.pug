@@ -11,24 +11,39 @@ block main
     +img("banner-shop","banner_store01","jpg","banner")
     .banner__text
       h2(data-aos="fade-left") Tortilla Kits
-      p(data-aos="fade-right" data-aos-delay="100") Every kit includes 4 dozen tortillas.<br class ="br">You can also create a custom kit of 4 donzens with the<br class ="br">flavors of your preference, just click on “CUSTOM KIT”.<br class ="br">Once you complete your kit, it will be added<br class ="br">to your cart
+      p(data-aos="fade-right" data-aos-delay="100") Every kit includes 4 dozen tortillas.<br class ="br">You can also create a custom kit of 4 donzens with the<br class ="br">flavors of your preference, just click on “CUSTOM KIT”.<br class ="br">Once you complete your kit, it will be added<br class ="br">to your cart.
   section.products
     a(href="#").view-cart VIEW/EDIT CART
     .products-container.glide
       div(data-glide-el="track" class="glide__track")
         ul.glide__slides
           each item, i in products
-            li.glide__slide(data-aos="fade-up" data-aos-delay=`${i*100}`)
-              figure.products__item
-                img(src=`img/${item.img}`)
-                figcaption=item.name
-                .item-action 
-                  button.btn-store.ml(type='button') 4 DOZENS
-                  .youKit.btn-store
-                    span YOUR KIT
-                    button.btn-plus +
-                    input.cout(name="count" value="0")
-                    button.less -
+            if(item.name!=="Cilantro & Jalapeño")
+              li.glide__slide(data-aos="fade-up" data-aos-delay=`${i*100}`)
+                figure.products__item
+                  img(src=`img/${item.img}`)
+                  figcaption=item.name
+                  .item-action 
+                    .btn-store 4 DOZENS
+                    .btn-store.kit
+                      span.title-span YOUR KIT
+                      span.signo.mas +
+                      span.inputKit 0
+                      span.signo.menos
+            else
+              li.glide__slide(data-aos="fade-up" data-aos-delay=`${i*100}`)
+                figure.products__item
+                  img(src=`img/${item.img}`)
+                  figcaption Cilantro & Jalape<span style="font-size:.8em">ñ</span>o
+                  .item-action 
+                    .btn-store 4 DOZENS
+                    .btn-store.kit
+                      span.title-span YOUR KIT
+                      span.signo.mas +
+                      span.inputKit 0
+                      span.signo.menos
+
+            
         <div class="glide__arrows" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
             img(src="img/arrow-left.png", alt="")
@@ -44,19 +59,19 @@ block main
       a(href="#") Refund Policy
   script.
       //- AOS.init();
-      if(document.querySelector('.glide')){
-        new Glide('.glide',{
-          type: "carousel",
-          perView:3,
-          autoplay:5000,
-          hoverpause: false,
-          breakpoints: {
-            800: {
-              perView: 2
-            },
-            600: {
-              perView: 1
-            }
-          }
-        }).mount()
-      }
+      //- if(document.querySelector('.glide')){
+      //-   new Glide('.glide',{
+      //-     type: "carousel",
+      //-     perView:3,
+      //-     autoplay:5000,
+      //-     hoverpause: false,
+      //-     breakpoints: {
+      //-       800: {
+      //-         perView: 2
+      //-       },
+      //-       600: {
+      //-         perView: 1
+      //-       }
+      //-     }
+      //-   }).mount()
+      //- }

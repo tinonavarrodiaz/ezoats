@@ -13,6 +13,9 @@
   left: 0;
   z-index: var(--z-modal);
   width: 100%;
+  @include to(l) {
+    grid-gap: 0.8em;
+  }
   body:not(.home) & {
     position: relative;
     background-color: var(--header-background);
@@ -24,6 +27,10 @@
     fill: #fff;
     width: 2em;
     height: 2em;
+    @include to(l) {
+      width: 1.5em;
+      height: 1.5em;
+    }
   }
   * {
     // display: none;
@@ -31,8 +38,18 @@
   .car {
     width: 1.9em;
     height: 1.9em;
+    @include to(l) {
+      width: 1.5em;
+      height: 1.5em;
+      position: relative;
+      top: -3px;
+    }
   }
   .main-logo {
     width: 110px;
+    @include to(l) {
+      width: 75px;
+      // height: 1em;
+    }
   }
 }

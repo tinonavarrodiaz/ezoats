@@ -6,14 +6,17 @@
   justify-content: center;
   color: #17110e;
   padding: 0 1em;
-
+  max-height: 400px;
   @include from(l) {
     height: 516px;
     padding: 0;
   }
+  @include to(l) {
+    max-height: 200px;
+  }
   h1 {
     line-height: 1.1;
-    font-size: 170px !important;
+    font-size: 150px !important;
     margin-bottom: 0;
     font-family: $body-font;
     // font-size: 95px;
@@ -21,17 +24,17 @@
     // margin-bottom: 0.5em;
     // line-height: 1.1em;
     @include to(l) {
-      font-size: 75px !important;
+      font-size: 50px !important;
     }
   }
   p {
     margin-bottom: 0;
-    font-size: 60px;
+    font-size: 37px;
     letter-spacing: 2px;
     text-align: center;
     line-height: 1.1;
     @include to(l) {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 }
@@ -73,7 +76,7 @@
     padding: 0 1em;
   }
   h2 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1.1;
     @include to(l) {
       font-size: 2em;
@@ -81,6 +84,7 @@
   }
   p {
     font-size: 25px;
+    line-height: 1.2;
     @include to(l) {
       font-size: 1em;
       // line-height: 1.1;
@@ -93,7 +97,7 @@
   position: relative;
   font-size: 20px;
   @include from(l) {
-    height: 500px;
+    height: 396px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,7 +126,7 @@
     @include from(l) {
       text-align: left;
       // max-width: 930px;
-      font-size: 2em;
+      font-size: 1.4em;
       line-height: 1.2;
     }
   }

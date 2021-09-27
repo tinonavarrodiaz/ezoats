@@ -1,16 +1,21 @@
 .slide-container {
   // display: none;
   position: relative;
+  img {
+    display: block;
+  }
 }
 .slider-page {
   height: auto;
+  width: 100%;
   padding: 3em 3em 7em;
   background: url(../img/benefit-back-50.jpg) center / cover no-repeat;
   position: relative;
   min-height: 300px;
   overflow: hidden;
+  height: var(--text-height);
   @include from(l) {
-    padding: 5% 5% 10%;
+    padding: 5% 25% 10%;
   }
 }
 footer.ben {
@@ -32,35 +37,41 @@ footer.ben {
     padding: 2rem 2rem 4rem 10%;
     text-align: right;
     h3 {
-      font-size: 40px;
+      font-size: 30px;
       font-weight: normal;
     }
     p {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 }
 .slider-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  // background: lime;
-  width: 50%;
+  top: 0;
+  // transform: translateY(-50%);
+  left: -10%;
+  // background: rgba(lime, 0.5);
+  width: 60%;
   padding: 0 1em;
   z-index: 50;
   cursor: pointer;
-  height: 100%;
+  height: var(--img-height);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-right: 2%;
-  padding-left: 2%;
+  // padding-right: 2%;
+  // padding-left: 2%;
+  img {
+    // transform: translateX(-300%);
+  }
   &.right {
-    // background: tomato;
+    // background: rgba(tomato, 0.5);
     left: unset;
-    right: 0;
+    right: -10%;
     justify-content: flex-end;
+    img {
+      // transform: translateX(300%);
+    }
   }
   img {
     @include to(l) {
@@ -70,9 +81,9 @@ footer.ben {
   }
 }
 .slide {
-  position: absolute !important;
+  position: relative !important;
   top: 0;
-  left: -500vw;
+  // left: -500vw;
   width: 100%;
   height: auto;
   margin: 0 auto;

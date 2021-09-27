@@ -1,27 +1,28 @@
 .products {
   background-color: #16110e;
   position: relative;
-  padding: 250px 10vw;
+  padding: 130px 10vw 70px;
   transform: translateY(-1px);
   @include from(1800px) {
-    padding: 250px 10vw 210px;
+    padding: 150px 10vw 100px;
   }
   @include to(l) {
-    padding: 7em 4em;
+    padding: 7em 2em;
   }
 }
 .view-cart {
   position: absolute;
   display: block;
-  right: 107px;
-  top: 70px;
-  font-size: 23px;
+  right: 12vw;
+  top: 57px;
+  font-size: 27px;
   color: #fff;
   @include to(l) {
     // padding: 6em 4em;
     right: 50%;
     top: 2em;
     transform: translateX(50%);
+    font-size: 1.2em;
   }
 }
 .products-container {
@@ -53,43 +54,100 @@
 .btn-store {
   background-color: #000000;
   color: #bcb5ab;
-  line-height: 2em;
-  height: 2em;
-  padding: 0 0.5em;
+  line-height: 2.5em;
+  height: 2.5em;
+  width: 40%;
   border: 1px solid;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
   font-size: 0.9em;
-  border-radius: 0.3rem;
-  display: block;
-  transform: scale(0.9);
-  font-size: 0.8em !important;
-  &.ml {
-    margin-right: 0em;
+  justify-content: center;
+  &.kit {
+    width: 55%;
   }
-  input {
-    width: 1.5em !important;
-    text-align: center;
-    background-color: transparent !important;
-    color: inherit !important;
-    border: none;
+  @include to(1400px) {
+    font-size: 0.7em;
+    border-radius: 0.5rem;
   }
-  > button {
-    // display: table;
-    border: none;
-    align-items: center;
-    // padding: 0;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
-    // transform: scale(0.8);
-    width: 1em;
+  @include to(l) {
+    font-size: 0.75em;
   }
   span {
+    display: inline-block;
+  }
+  .title-span {
+    margin-right: 0.75em;
+  }
+  .signo {
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 0.5em;
+    // height: 1em;
+    cursor: pointer;
+    // width: 1em;
+    position: relative;
+    font-size: 1.3em;
+    cursor: pointer;
+    &:last-child,
+    &:last-of-type {
+      margin-right: 0;
+      margin-left: 0.5em;
+      &:before {
+        content: '-';
+        // position: absolute;
+        // top: -50%;
+        // left: 50%;
+        width: auto;
+        height: auto;
+        // background: lime;
+        transform: translateY(-2px);
+      }
+    }
   }
 }
-.youKit {
-  display: flex;
-}
+// .btn-store {
+//   background-color: #000000;
+//   color: #bcb5ab;
+//   // line-height: 3em;
+//   height: 2em;
+//   padding: 0.5em 1em;
+//   border: 1px solid;
+//   // font-size: 0.9em;
+//   border-radius: 0.3rem;
+//   display: block;
+//   transform: scale(1);
+//   font-size: 0.7em !important;
+//   &.ml {
+//     margin-right: 0em;
+//   }
+//   input {
+//     width: 1.5em !important;
+//     text-align: center;
+//     background-color: transparent !important;
+//     color: inherit !important;
+//     border: none;
+//   }
+//   > button {
+//     // display: table;
+//     border: none;
+//     align-items: center;
+//     // padding: 0;
+//     background: transparent;
+//     color: inherit;
+//     cursor: pointer;
+//     // transform: scale(0.8);
+//     width: 1em;
+//   }
+//   span {
+//     margin-right: 0.5em;
+//   }
+// }
+// .youKit {
+//   display: flex;
+// }
 .products-container {
   position: relative;
 
@@ -118,5 +176,55 @@
     @include to(l) {
       transform: translateY(-50%) translateX(-2.5em);
     }
+  }
+}
+.bio-page {
+  width: 100%;
+  height: 63.8vw;
+  background: url(../img/bio-back-100.jpg) center top / cover no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @include to(l) {
+    height: auto;
+    padding: 3em 1em 7em;
+  }
+  footer.ben {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 26px;
+    right: 32px;
+    z-index: 100;
+    color: #fff;
+    font-size: 14px;
+    @include to(l) {
+      font-size: 14px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 50%;
+      text-align: center;
+    }
+  }
+}
+.bio-content {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.2;
+  @include to(l) {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 40px;
+    margin-bottom: 1.5em;
+    @include to(l) {
+      font-size: 30px;
+    }
+  }
+  .bio__name {
+    margin-bottom: 0;
   }
 }
